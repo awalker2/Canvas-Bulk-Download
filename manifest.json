@@ -1,0 +1,21 @@
+{
+  "name": "Canvas Bulk Download",
+  "version": "0.1",
+  "manifest_version" : 2,
+  "description": "Downloads all Canvas files when clicked on a modules page",
+  "background" : {
+    "scripts" : ["Background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["Download_Script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab"]
+}
